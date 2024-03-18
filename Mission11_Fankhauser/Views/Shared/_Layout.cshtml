@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>@ViewData["Title"] - Mission11_Fankhauser</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/Mission11_Fankhauser.styles.css" asp-append-version="true"/>
+</head>
+<body>
+<!-- Here is a div I added myself for the styling -->
+<div class="bg-secondary text-white p-2">
+    <span class="navbar-brand m-lg-2">Mission Control Book Emporium</span>
+</div>
+<div class="row">
+    <div class="text-center">
+        <h2>Our Most Popular Books</h2>
+    </div>
+</div>
+<div class="container col-9">
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+</div>
+
+<footer class="border-top footer text-muted">
+    <div class="container">
+        &copy; 2024 - Mission11_Fankhauser - SuperCoolBooks
+    </div>
+</footer>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

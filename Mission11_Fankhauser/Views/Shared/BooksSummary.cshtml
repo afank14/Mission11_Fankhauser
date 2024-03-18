@@ -1,0 +1,16 @@
+@* Set the model as type Book *@
+@model Book
+
+@* Create a div of class card *@
+<div class="card m-1 p-1 bg-light">
+    <!-- Show all the required fields. The price will be in the top right and a different color-->
+    <h3>@Model.Title
+        <span class="badge rounded-pill bg-primary text-white float-end">$@Model.Price</span></h3>
+
+    <ul>Written by <span style="font-style: italic">@Model.Author</span></ul>
+    <ul>@Model.Category, @Model.Classification</ul>
+    <ul>Publisher: @Model.Publisher</ul>
+    <ul>ISBN: @Model.Isbn</ul>
+    <ul>@Model.PageCount pages</ul>
+
+</div>

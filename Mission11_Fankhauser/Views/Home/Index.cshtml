@@ -1,0 +1,17 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@* Designate that the model will be a BooksListViewModel *@
+@model BooksListViewModel
+
+@* For each book in the Model.Books, go grab the html from the BooksSummary partial View *@
+@foreach (Book b in Model.Books)
+{
+    <partial name="BooksSummary" model="b"></partial>
+}
+
+@* Create a div that calls on the PaginationInfo ViewModel passed in the BooksListView Model *@
+@* This will dynamically create the page number a tags *@
+<div page-model="@Model.PaginationInfo" page-action="Index" page-class-enabled="true" page-class="btn" 
+     page-class-normal="btn-outline-dark" page-class-selected="btn-primary" class="btn-group pull-right m-1"></div>
